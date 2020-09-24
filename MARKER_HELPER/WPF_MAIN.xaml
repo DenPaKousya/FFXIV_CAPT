@@ -1,0 +1,100 @@
+﻿<Window x:Class="WPF_MAIN"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MARKER_HELPER"
+        mc:Ignorable="d"
+        Title="FIELD MARKER" Height="450" Width="550" FontFamily="Meiryo" ResizeMode="NoResize">
+    <Grid>
+        <Image x:Name="PCB_ICON" Margin="20,22,15,15" VerticalAlignment="Top" HorizontalAlignment="Right" Height="72" Width="72" Source="RES/IMG/ICON.png" Opacity="0.9"/>
+
+        <GroupBox Header="UISAVE.DAT" VerticalAlignment="Top" Margin="5,5,5,0">
+            <Grid>
+                <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Height="35" Margin="0,0,0,0">
+                    <Button x:Name="BTN_OPEN_FILE" HorizontalAlignment="Left" Margin="5,5,5,5" Height="25" Width="70" Content="OPEN"/>
+                    <TextBox x:Name="TXT_PATH_UISAVE" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="80,5,5,5" Width="355" Text="***" IsReadOnly="True" BorderBrush="{x:Null}" Background="#00FFFFFF"/>
+                </Grid>
+                <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Height="35" Margin="0,35,0,0">
+                    <Label HorizontalAlignment="Left" Margin="5,5,5,5" Content="OFFSET" />
+                    <Label x:Name="LBL_OFFSET" HorizontalAlignment="Left" Margin="80,5,5,5" Content="xxx" />
+                </Grid>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="GRP_SAVE_LIST" Header="SAVE LIST" VerticalAlignment="Top" Margin="5,100,5,0">
+            <Grid>
+                <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,6,5,5" Height="200" Width="50">
+                    <RadioButton x:Name="RDO_MARKER_01" Content="01" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,5,5,5" />
+                    <RadioButton x:Name="RDO_MARKER_02" Content="02" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,45,5,5" />
+                    <RadioButton x:Name="RDO_MARKER_03" Content="03" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,85,5,5" />
+                    <RadioButton x:Name="RDO_MARKER_04" Content="04" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,125,5,5" />
+                    <RadioButton x:Name="RDO_MARKER_05" Content="05" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,165,5,5" />
+                </Grid>
+                <Grid VerticalAlignment="Top" Margin="60,0,5,5" Height="40">
+                    <Label x:Name="LBL_01_NAME_CONTENT" HorizontalAlignment="Left" Margin="5,5,5,5" Width="250" Content="***"/>
+                    <Label x:Name="LBL_01_MARKER_A" HorizontalAlignment="Left" Margin="255,5,5,5" Width="20" Content="A" Foreground="#FFC80000" FontWeight="Bold"/>
+                    <Label x:Name="LBL_01_MARKER_B" HorizontalAlignment="Left" Margin="275,5,5,5" Width="20" Content="B" Foreground="#FFC8C800" FontWeight="Bold"/>
+                    <Label x:Name="LBL_01_MARKER_C" HorizontalAlignment="Left" Margin="295,5,5,5" Width="20" Content="C" Foreground="#FF0000C8" FontWeight="Bold"/>
+                    <Label x:Name="LBL_01_MARKER_D" HorizontalAlignment="Left" Margin="315,5,5,5" Width="20" Content="D" Foreground="#FFC800C8" FontWeight="Bold"/>
+                    <Label x:Name="LBL_01_MARKER_1" HorizontalAlignment="Left" Margin="335,5,5,5" Width="20" Content="1" Foreground="#FFC80000" FontWeight="Bold"/>
+                    <Label x:Name="LBL_01_MARKER_2" HorizontalAlignment="Left" Margin="355,5,5,5" Width="20" Content="2" Foreground="#FFC8C800" FontWeight="Bold"/>
+                    <Label x:Name="LBL_01_MARKER_3" HorizontalAlignment="Left" Margin="375,5,5,5" Width="20" Content="3" Foreground="#FF0000C8" FontWeight="Bold"/>
+                    <Label x:Name="LBL_01_MARKER_4" HorizontalAlignment="Left" Margin="395,5,5,5" Width="20" Content="4" Foreground="#FFC800C8" FontWeight="Bold"/>
+                </Grid>
+                <Grid VerticalAlignment="Top" Margin="60,40,5,5" Height="40">
+                    <Label x:Name="LBL_02_NAME_CONTENT" HorizontalAlignment="Left" Margin="5,5,5,5" Width="250" Content="***"/>
+                    <Label x:Name="LBL_02_MARKER_A" HorizontalAlignment="Left" Margin="255,5,5,5" Width="20" Content="A" Foreground="#FFC80000" FontWeight="Bold"/>
+                    <Label x:Name="LBL_02_MARKER_B" HorizontalAlignment="Left" Margin="275,5,5,5" Width="20" Content="B" Foreground="#FFC8C800" FontWeight="Bold"/>
+                    <Label x:Name="LBL_02_MARKER_C" HorizontalAlignment="Left" Margin="295,5,5,5" Width="20" Content="C" Foreground="#FF0000C8" FontWeight="Bold"/>
+                    <Label x:Name="LBL_02_MARKER_D" HorizontalAlignment="Left" Margin="315,5,5,5" Width="20" Content="D" Foreground="#FFC800C8" FontWeight="Bold"/>
+                    <Label x:Name="LBL_02_MARKER_1" HorizontalAlignment="Left" Margin="335,5,5,5" Width="20" Content="1" Foreground="#FFC80000" FontWeight="Bold"/>
+                    <Label x:Name="LBL_02_MARKER_2" HorizontalAlignment="Left" Margin="355,5,5,5" Width="20" Content="2" Foreground="#FFC8C800" FontWeight="Bold"/>
+                    <Label x:Name="LBL_02_MARKER_3" HorizontalAlignment="Left" Margin="375,5,5,5" Width="20" Content="3" Foreground="#FF0000C8" FontWeight="Bold"/>
+                    <Label x:Name="LBL_02_MARKER_4" HorizontalAlignment="Left" Margin="395,5,5,5" Width="20" Content="4" Foreground="#FFC800C8" FontWeight="Bold"/>
+                </Grid>
+                <Grid VerticalAlignment="Top" Margin="60,80,5,5" Height="40">
+                    <Label x:Name="LBL_03_NAME_CONTENT" HorizontalAlignment="Left" Margin="5,5,5,5" Width="250" Content="***"/>
+                    <Label x:Name="LBL_03_MARKER_A" HorizontalAlignment="Left" Margin="255,5,5,5" Width="20" Content="A" Foreground="#FFC80000" FontWeight="Bold"/>
+                    <Label x:Name="LBL_03_MARKER_B" HorizontalAlignment="Left" Margin="275,5,5,5" Width="20" Content="B" Foreground="#FFC8C800" FontWeight="Bold"/>
+                    <Label x:Name="LBL_03_MARKER_C" HorizontalAlignment="Left" Margin="295,5,5,5" Width="20" Content="C" Foreground="#FF0000C8" FontWeight="Bold"/>
+                    <Label x:Name="LBL_03_MARKER_D" HorizontalAlignment="Left" Margin="315,5,5,5" Width="20" Content="D" Foreground="#FFC800C8" FontWeight="Bold"/>
+                    <Label x:Name="LBL_03_MARKER_1" HorizontalAlignment="Left" Margin="335,5,5,5" Width="20" Content="1" Foreground="#FFC80000" FontWeight="Bold"/>
+                    <Label x:Name="LBL_03_MARKER_2" HorizontalAlignment="Left" Margin="355,5,5,5" Width="20" Content="2" Foreground="#FFC8C800" FontWeight="Bold"/>
+                    <Label x:Name="LBL_03_MARKER_3" HorizontalAlignment="Left" Margin="375,5,5,5" Width="20" Content="3" Foreground="#FF0000C8" FontWeight="Bold"/>
+                    <Label x:Name="LBL_03_MARKER_4" HorizontalAlignment="Left" Margin="395,5,5,5" Width="20" Content="4" Foreground="#FFC800C8" FontWeight="Bold"/>
+                </Grid>
+                <Grid VerticalAlignment="Top" Margin="60,120,5,5" Height="40">
+                    <Label x:Name="LBL_04_NAME_CONTENT" HorizontalAlignment="Left" Margin="5,5,5,5" Width="250" Content="***"/>
+                    <Label x:Name="LBL_04_MARKER_A" HorizontalAlignment="Left" Margin="255,5,5,5" Width="20" Content="A" Foreground="#FFC80000" FontWeight="Bold"/>
+                    <Label x:Name="LBL_04_MARKER_B" HorizontalAlignment="Left" Margin="275,5,5,5" Width="20" Content="B" Foreground="#FFC8C800" FontWeight="Bold"/>
+                    <Label x:Name="LBL_04_MARKER_C" HorizontalAlignment="Left" Margin="295,5,5,5" Width="20" Content="C" Foreground="#FF0000C8" FontWeight="Bold"/>
+                    <Label x:Name="LBL_04_MARKER_D" HorizontalAlignment="Left" Margin="315,5,5,5" Width="20" Content="D" Foreground="#FFC800C8" FontWeight="Bold"/>
+                    <Label x:Name="LBL_04_MARKER_1" HorizontalAlignment="Left" Margin="335,5,5,5" Width="20" Content="1" Foreground="#FFC80000" FontWeight="Bold"/>
+                    <Label x:Name="LBL_04_MARKER_2" HorizontalAlignment="Left" Margin="355,5,5,5" Width="20" Content="2" Foreground="#FFC8C800" FontWeight="Bold"/>
+                    <Label x:Name="LBL_04_MARKER_3" HorizontalAlignment="Left" Margin="375,5,5,5" Width="20" Content="3" Foreground="#FF0000C8" FontWeight="Bold"/>
+                    <Label x:Name="LBL_04_MARKER_4" HorizontalAlignment="Left" Margin="395,5,5,5" Width="20" Content="4" Foreground="#FFC800C8" FontWeight="Bold"/>
+                </Grid>
+                <Grid VerticalAlignment="Top" Margin="60,160,5,5" Height="40">
+                    <Label x:Name="LBL_05_NAME_CONTENT" HorizontalAlignment="Left" Margin="5,5,5,5" Width="250" Content="***"/>
+                    <Label x:Name="LBL_05_MARKER_A" HorizontalAlignment="Left" Margin="255,5,5,5" Width="20" Content="A" Foreground="#FFC80000" FontWeight="Bold"/>
+                    <Label x:Name="LBL_05_MARKER_B" HorizontalAlignment="Left" Margin="275,5,5,5" Width="20" Content="B" Foreground="#FFC8C800" FontWeight="Bold"/>
+                    <Label x:Name="LBL_05_MARKER_C" HorizontalAlignment="Left" Margin="295,5,5,5" Width="20" Content="C" Foreground="#FF0000C8" FontWeight="Bold"/>
+                    <Label x:Name="LBL_05_MARKER_D" HorizontalAlignment="Left" Margin="315,5,5,5" Width="20" Content="D" Foreground="#FFC800C8" FontWeight="Bold"/>
+                    <Label x:Name="LBL_05_MARKER_1" HorizontalAlignment="Left" Margin="335,5,5,5" Width="20" Content="1" Foreground="#FFC80000" FontWeight="Bold"/>
+                    <Label x:Name="LBL_05_MARKER_2" HorizontalAlignment="Left" Margin="355,5,5,5" Width="20" Content="2" Foreground="#FFC8C800" FontWeight="Bold"/>
+                    <Label x:Name="LBL_05_MARKER_3" HorizontalAlignment="Left" Margin="375,5,5,5" Width="20" Content="3" Foreground="#FF0000C8" FontWeight="Bold"/>
+                    <Label x:Name="LBL_05_MARKER_4" HorizontalAlignment="Left" Margin="395,5,5,5" Width="20" Content="4" Foreground="#FFC800C8" FontWeight="Bold"/>
+                </Grid>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="GRP_TASK" Header="TASK" VerticalAlignment="Top" Margin="5,340,5,0">
+            <Grid Height="35" Margin="0,0,0,0">
+                <Button x:Name="BTN_BACKUP" HorizontalAlignment="Left" Margin="5,5,5,5" Height="25" Width="70" Content="BACKUP"/>
+                <Button x:Name="BTN_RESTORE" HorizontalAlignment="Left" Margin="80,5,5,5" Height="25" Width="70" Content="RESTORE"/>
+                <Button x:Name="BTN_DELETE" HorizontalAlignment="Left" Margin="155,5,5,5" Height="25" Width="70" Content="DELETE"/>
+                <Button x:Name="BTN_DOWNLOAD" HorizontalAlignment="Left" Margin="230,5,5,5" Height="25" Width="80" Content="DOWNLOAD"/>
+            </Grid>
+        </GroupBox>
+        
+    </Grid>
+</Window>
