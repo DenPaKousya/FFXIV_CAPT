@@ -1,6 +1,5 @@
 C:\Users\DenPa\source\repos\FFXIV_CAPT\SRC\STICKER_HELPER\bin\STICKER_HELPER.exe.config
 C:\Users\DenPa\source\repos\FFXIV_CAPT\SRC\STICKER_HELPER\bin\STICKER_HELPER.exe
-C:\Users\DenPa\source\repos\FFXIV_CAPT\SRC\STICKER_HELPER\obj\Debug\STICKER_HELPER.vbprojAssemblyReference.cache
 C:\Users\DenPa\source\repos\FFXIV_CAPT\SRC\STICKER_HELPER\obj\Debug\WPF\WPF_DOWNLOAD.g.vb
 C:\Users\DenPa\source\repos\FFXIV_CAPT\SRC\STICKER_HELPER\obj\Debug\WPF_MAIN.g.vb
 C:\Users\DenPa\source\repos\FFXIV_CAPT\SRC\STICKER_HELPER\obj\Debug\STICKER_HELPER_MarkupCompile.cache
