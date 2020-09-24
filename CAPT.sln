@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CAPT_COMMON", "CAPT_COMMON\CAPT_COMMON.vbproj", "{989E0B91-9481-4DE8-BCAF-1FC9CD30CCA2}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CAPT_GDI", "CAPT_GDI\CAPT_GDI.vbproj", "{F31A5E16-07E3-4442-BA2E-212182303778}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{989E0B91-9481-4DE8-BCAF-1FC9CD30CCA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{989E0B91-9481-4DE8-BCAF-1FC9CD30CCA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{989E0B91-9481-4DE8-BCAF-1FC9CD30CCA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F31A5E16-07E3-4442-BA2E-212182303778}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F31A5E16-07E3-4442-BA2E-212182303778}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F31A5E16-07E3-4442-BA2E-212182303778}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F31A5E16-07E3-4442-BA2E-212182303778}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

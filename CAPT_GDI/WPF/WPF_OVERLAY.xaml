@@ -1,0 +1,172 @@
+﻿<Window x:Class="WPF_OVERLAY"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CAPT_GDI"
+        mc:Ignorable="d"
+    Title="" Height="800" Width="800" WindowStartupLocation="Manual" FontSize="15" ResizeMode="CanMinimize" FontFamily="Meiryo" WindowStyle="None" AllowsTransparency="True" Background="Transparent" Topmost="True" ShowInTaskbar="False">
+    <Grid>
+        <Image x:Name="PCB_APPEND" Margin="0,0,0,0" Opacity="0.5" />
+        <Image x:Name="PCB_COMPOSITION" Margin="0,0,0,0" />
+
+        <Image x:Name="PCB_COLOR_INFO" HorizontalAlignment="Left" Width="256" Height="130" Margin="10,10,10,10" VerticalAlignment="Top" />
+        <Grid x:Name="PCB_PARAM" HorizontalAlignment="Right" VerticalAlignment="Top" Width="150" Height="120" Margin="10,10,10,10">
+            <Image x:Name="PCB_PARAM_GUIDE" HorizontalAlignment="Right" Width="70" Height="90" Margin="0,0,80,0" VerticalAlignment="Top" />
+            <Image x:Name="PCB_PARAM_VALUE" HorizontalAlignment="Right" Width="70" Height="90" Margin="0,0,0,0" VerticalAlignment="Top" />
+            <Image x:Name="PCB_STATE" HorizontalAlignment="Right" Width="150" Height="30" Margin="0,90,0,0" VerticalAlignment="Top" />
+        </Grid>
+
+        <Button x:Name="PCB_BUTTON_CLOSE" HorizontalAlignment="Right" VerticalAlignment="Top" Width="32" Height="32" Margin="10,10,10,10" ToolTip="オーバーレイを非表示にします">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <ContentPresenter>
+                        <ContentPresenter.ContentTemplate>
+                            <DataTemplate>
+                                <Image Source="/CAPT_GDI;component/RES/IMG/CLOSE.png"/>
+                            </DataTemplate>
+                        </ContentPresenter.ContentTemplate>
+                    </ContentPresenter>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="PCB_BUTTON_COMPOSITION" HorizontalAlignment="Right" VerticalAlignment="Top" Width="32" Height="32" Margin="10,42,10,42" ToolTip="構図補助線の表示を切り替えます" >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <ContentPresenter>
+                        <ContentPresenter.ContentTemplate>
+                            <DataTemplate>
+                                <Image Source="/CAPT_GDI;component/RES/IMG/COMPOSITION.png"/>
+                            </DataTemplate>
+                        </ContentPresenter.ContentTemplate>
+                    </ContentPresenter>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="PCB_BUTTON_CHANGE_COMPOSITION" HorizontalAlignment="Right" VerticalAlignment="Top" Width="32" Height="32" Margin="10,74,10,74" ToolTip="構図補助線の種類を切り替えます" >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <ContentPresenter>
+                        <ContentPresenter.ContentTemplate>
+                            <DataTemplate>
+                                <Image Source="/CAPT_GDI;component/RES/IMG/CHANGE_RIGHT.png"/>
+                            </DataTemplate>
+                        </ContentPresenter.ContentTemplate>
+                    </ContentPresenter>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="PCB_BUTTON_ROTATE" HorizontalAlignment="Right" VerticalAlignment="Top" Width="32" Height="32" Margin="10,106,10,106" ToolTip="回転イメージの表示を切り替えます" >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <ContentPresenter>
+                        <ContentPresenter.ContentTemplate>
+                            <DataTemplate>
+                                <Image Source="/CAPT_GDI;component/RES/IMG/ROTATE.png"/>
+                            </DataTemplate>
+                        </ContentPresenter.ContentTemplate>
+                    </ContentPresenter>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="PCB_BUTTON_SETTING" HorizontalAlignment="Right" VerticalAlignment="Top" Width="32" Height="32" Margin="10,138,10,138" ToolTip="設定画面の表示を切り替えます" >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <ContentPresenter>
+                        <ContentPresenter.ContentTemplate>
+                            <DataTemplate>
+                                <Image Source="/CAPT_GDI;component/RES/IMG/SETTING.png"/>
+                            </DataTemplate>
+                        </ContentPresenter.ContentTemplate>
+                    </ContentPresenter>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="PCB_BUTTON_UI" HorizontalAlignment="Right" VerticalAlignment="Top" Width="32" Height="32" Margin="10,170,10,170" ToolTip="ゲーム内UIの表示を切り替えます" >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <ContentPresenter>
+                        <ContentPresenter.ContentTemplate>
+                            <DataTemplate>
+                                <Image Source="/CAPT_GDI;component/RES/IMG/USER_INTERFACE.png"/>
+                            </DataTemplate>
+                        </ContentPresenter.ContentTemplate>
+                    </ContentPresenter>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="PCB_BUTTON_EXPLORER" HorizontalAlignment="Right" VerticalAlignment="Top" Width="32" Height="32" Margin="10,202,10,202" ToolTip="SS保存場所を開きます" >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <ContentPresenter>
+                        <ContentPresenter.ContentTemplate>
+                            <DataTemplate>
+                                <Image Source="/CAPT_GDI;component/RES/IMG/EXPLORER.png"/>
+                            </DataTemplate>
+                        </ContentPresenter.ContentTemplate>
+                    </ContentPresenter>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="PCB_BUTTON_APPEND_IMAGE_LOAD" HorizontalAlignment="Right" VerticalAlignment="Top" Width="32" Height="32" Margin="10,234,10,234" ToolTip="重ね合わせ用イメージを選択します" >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <ContentPresenter>
+                        <ContentPresenter.ContentTemplate>
+                            <DataTemplate>
+                                <Image Source="/CAPT_GDI;component/RES/IMG/APPEND_IMAGE_LOAD.png"/>
+                            </DataTemplate>
+                        </ContentPresenter.ContentTemplate>
+                    </ContentPresenter>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="PCB_BUTTON_APPEND_IMAGE_CHANGE" HorizontalAlignment="Right" VerticalAlignment="Top" Width="32" Height="32" Margin="10,266,10,266" ToolTip="重ね合わせ用イメージの表示・非表示を切り替えます" >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <ContentPresenter>
+                        <ContentPresenter.ContentTemplate>
+                            <DataTemplate>
+                                <Image Source="/CAPT_GDI;component/RES/IMG/APPEND_IMAGE_CHANGE.png"/>
+                            </DataTemplate>
+                        </ContentPresenter.ContentTemplate>
+                    </ContentPresenter>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Slider x:Name="SLI_APPEND_IMAGE_OPACITY" HorizontalAlignment="Right" VerticalAlignment="Top" Height="22" Margin="52,271,52,271" Width="100" Value="50" Maximum="100" SmallChange="1"/>
+        <Button x:Name="PCB_BUTTON_SHUTTER_CONTINUOUS" HorizontalAlignment="Right" VerticalAlignment="Top" Width="32" Height="32" Margin="10,298,10,298" ToolTip="連続撮影を行います" >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <ContentPresenter>
+                        <ContentPresenter.ContentTemplate>
+                            <DataTemplate>
+                                <Image Source="/CAPT_GDI;component/RES/IMG/SHUTTER_CONTINUOUS.png"/>
+                            </DataTemplate>
+                        </ContentPresenter.ContentTemplate>
+                    </ContentPresenter>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="PCB_BUTTON_LIGHT" HorizontalAlignment="Right" VerticalAlignment="Top" Width="32" Height="32" Margin="10,330,10,330" ToolTip="ライト1を規定位置に配置します" >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <ContentPresenter>
+                        <ContentPresenter.ContentTemplate>
+                            <DataTemplate>
+                                <Image Source="/CAPT_GDI;component/RES/IMG/LIGHT.png"/>
+                            </DataTemplate>
+                        </ContentPresenter.ContentTemplate>
+                    </ContentPresenter>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Image x:Name="PCB_THUMBNAIL_03" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="160" Height="90" Margin="390,10,390,10" Opacity="0.8" />
+        <Image x:Name="PCB_THUMBNAIL_02" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="160" Height="90" Margin="220,10,220,10" Opacity="0.8" />
+        <Image x:Name="PCB_THUMBNAIL_01" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="160" Height="90" Margin="50,10,50,10" Opacity="0.8" />
+
+        <Image x:Name="PCB_SHUTTER" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="32" Height="32" Margin="10,58,10,58" Source="/CAPT_GDI;component/RES/IMG/SHUTTER_C_W.png" ToolTip="撮影を行います" />
+        <Image x:Name="PCB_SHUTTER_JPEG" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="32" Height="32" Margin="10,16,10,16" Source="/CAPT_GDI;component/RES/IMG/SHUTTER_C_G.png" ToolTip="撮影を行います（SNS向け）" />
+    </Grid>
+</Window>
