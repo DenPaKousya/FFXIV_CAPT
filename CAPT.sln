@@ -7,6 +7,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CAPT_COMMON", "CAPT_COMMON\
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CAPT_GDI", "CAPT_GDI\CAPT_GDI.vbproj", "{F31A5E16-07E3-4442-BA2E-212182303778}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CAPT_GDI_WPF", "CAPT_GDI_WPF\CAPT_GDI_WPF.vbproj", "{86145483-D488-427E-AE61-C68756457B88}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F31A5E16-07E3-4442-BA2E-212182303778}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F31A5E16-07E3-4442-BA2E-212182303778}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F31A5E16-07E3-4442-BA2E-212182303778}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86145483-D488-427E-AE61-C68756457B88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86145483-D488-427E-AE61-C68756457B88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86145483-D488-427E-AE61-C68756457B88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86145483-D488-427E-AE61-C68756457B88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

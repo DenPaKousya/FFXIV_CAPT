@@ -1,0 +1,74 @@
+﻿<Window x:Class="WPF_OVERLAY"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CAPT_GDI"
+        mc:Ignorable="d"
+    Title="" Height="800" Width="800" WindowStartupLocation="Manual" FontSize="15" FontFamily="Meiryo" WindowStyle="None" AllowsTransparency="True" Background="Transparent" Topmost="True" ShowInTaskbar="False">
+    <Grid>
+        <Image x:Name="PCB_APPEND" Margin="0,0,0,0" Opacity="0.5" />
+        <Image x:Name="PCB_COMPOSITION" Margin="0,0,0,0" />
+
+        <Image x:Name="PCB_COLOR_INFO" HorizontalAlignment="Left" Width="256" Height="130" Margin="10,10,10,10" VerticalAlignment="Top" />
+        <Grid x:Name="PCB_PARAM" HorizontalAlignment="Right" VerticalAlignment="Top" Width="150" Height="120" Margin="10,10,10,10" Background="#19000000">
+            <Image x:Name="PCB_PARAM_GUIDE" HorizontalAlignment="Right" Width="70" Height="90" Margin="0,0,80,0" VerticalAlignment="Top" />
+            <Image x:Name="PCB_PARAM_VALUE" HorizontalAlignment="Right" Width="70" Height="90" Margin="0,0,0,0" VerticalAlignment="Top" />
+            <Image x:Name="PCB_STATE" HorizontalAlignment="Right" Width="150" Height="30" Margin="0,90,0,0" VerticalAlignment="Top" />
+        </Grid>
+
+        <Button x:Name="PCB_BUTTON_CLOSE" HorizontalAlignment="Right" VerticalAlignment="Top" Width="48" Height="48" Margin="10,10,10,10" ToolTip="オーバーレイを非表示にします" Background="#00000000" BorderBrush="#00000000">
+            <Image Source="/CAPT_GDI;component/RES/IMG/CLOSE.png" Margin="-2,-2,-2,-2"/>
+        </Button>
+        <Button x:Name="PCB_BUTTON_COMPOSITION" HorizontalAlignment="Right" VerticalAlignment="Top" Width="48" Height="48" Margin="10,60,10,60" ToolTip="構図補助線の表示を切り替えます" Background="#00000000" BorderBrush="#00000000">
+            <Image Source="/CAPT_GDI;component/RES/IMG/COMPOSITION.png" Margin="-2,-2,-2,-2"/>
+        </Button>
+        <Button x:Name="PCB_BUTTON_CHANGE_COMPOSITION" HorizontalAlignment="Right" VerticalAlignment="Top" Width="48" Height="48" Margin="10,110,10,110" ToolTip="構図補助線の種類を切り替えます" Background="#00000000" BorderBrush="#00000000">
+            <Image Source="/CAPT_GDI;component/RES/IMG/CHANGE_RIGHT.png" Margin="-2,-2,-2,-2"/>
+        </Button>
+        <Button x:Name="PCB_BUTTON_ROTATE" HorizontalAlignment="Right" VerticalAlignment="Top" Width="48" Height="48" Margin="10,160,10,160" ToolTip="回転イメージの表示を切り替えます" Background="#00000000" BorderBrush="#00000000">
+            <Image Source="/CAPT_GDI;component/RES/IMG/ROTATE.png" Margin="-2,-2,-2,-2"/>
+        </Button>
+        <Button x:Name="PCB_BUTTON_TRIM" HorizontalAlignment="Right" VerticalAlignment="Top" Width="48" Height="48" Margin="10,210,10,210" ToolTip="トリミングしたSSを取得します" Background="#00000000" BorderBrush="#00000000">
+            <Image Source="/CAPT_GDI;component/RES/IMG/TRIM.png" Margin="-2,-2,-2,-2"/>
+        </Button>
+        <Button x:Name="PCB_BUTTON_SETTING" HorizontalAlignment="Right" VerticalAlignment="Top" Width="48" Height="48" Margin="10,260,10,260" ToolTip="設定画面の表示を切り替えます" Background="#00000000" BorderBrush="#00000000">
+            <Image Source="/CAPT_GDI;component/RES/IMG/SETTING.png" Margin="-2,-2,-2,-2"/>
+        </Button>
+        <Button x:Name="PCB_BUTTON_UI" HorizontalAlignment="Right" VerticalAlignment="Top" Width="48" Height="48" Margin="10,310,10,310" ToolTip="ゲーム内UIの表示を切り替えます" Background="#00000000" BorderBrush="#00000000">
+            <Image Source="/CAPT_GDI;component/RES/IMG/USER_INTERFACE.png" Margin="-2,-2,-2,-2"/>
+        </Button>
+        <Button x:Name="PCB_BUTTON_EXPLORER" HorizontalAlignment="Right" VerticalAlignment="Top" Width="48" Height="48" Margin="10,360,10,360" ToolTip="SS保存場所を開きます" Background="#00000000" BorderBrush="#00000000">
+            <Image Source="/CAPT_GDI;component/RES/IMG/EXPLORER.png" Margin="-2,-2,-2,-2"/>
+        </Button>
+        <Button x:Name="PCB_BUTTON_SHUTTER_CONTINUOUS" HorizontalAlignment="Right" VerticalAlignment="Top" Width="48" Height="48" Margin="10,410,10,410" ToolTip="連続撮影を行います" Background="#00000000" BorderBrush="#00000000">
+            <Image Source="/CAPT_GDI;component/RES/IMG/SHUTTER_CONTINUOUS.png" Margin="-2,-2,-2,-2"/>
+        </Button>
+        <Button x:Name="PCB_BUTTON_LOGO" HorizontalAlignment="Right" VerticalAlignment="Top" Width="48" Height="48" Margin="10,460,10,460" ToolTip="SSにロゴを付与します" Background="#00000000" BorderBrush="#00000000">
+            <Image Source="/CAPT_GDI;component/RES/IMG/LOGO_ICON.png" Margin="-2,-2,-2,-2"/>
+        </Button>
+        <Button x:Name="PCB_BUTTON_THUMNAIL" HorizontalAlignment="Right" VerticalAlignment="Top" Width="48" Height="48" Margin="10,510,10,510" ToolTip="画面クローンを表示します" Background="#00000000" BorderBrush="#00000000">
+            <Image Source="/CAPT_GDI;component/RES/IMG/THUMBNAIL.png" Margin="-2,-2,-2,-2"/>
+        </Button>
+        <Button x:Name="PCB_BUTTON_AEB" HorizontalAlignment="Right" VerticalAlignment="Top" Width="48" Height="48" Margin="10,560,10,560" ToolTip="明るさを変えながら連続撮影を行います" Background="#00000000" BorderBrush="#00000000">
+            <Image Source="/CAPT_GDI;component/RES/IMG/AEB.png" Margin="-2,-2,-2,-2"/>
+        </Button>
+        <Button x:Name="PCB_BUTTON_LIGHT" HorizontalAlignment="Right" VerticalAlignment="Top" Width="48" Height="48" Margin="10,610,10,610" ToolTip="ライト1を規定位置に配置します" Background="#00000000" BorderBrush="#00000000">
+            <Image Source="/CAPT_GDI;component/RES/IMG/LIGHT.png" Margin="-2,-2,-2,-2"/>
+        </Button>
+        <Button x:Name="PCB_BUTTON_APPEND_IMAGE_LOAD" HorizontalAlignment="Right" VerticalAlignment="Top" Width="48" Height="48" Margin="10,660,10,660" ToolTip="重ね合わせ用イメージを選択します" Background="#00000000" BorderBrush="#00000000">
+            <Image Source="/CAPT_GDI;component/RES/IMG/APPEND_IMAGE_LOAD.png" Margin="-2,-2,-2,-2"/>
+        </Button>
+        <Button x:Name="PCB_BUTTON_APPEND_IMAGE_CHANGE" HorizontalAlignment="Right" VerticalAlignment="Top" Width="48" Height="48" Margin="10,710,10,710" ToolTip="重ね合わせ用イメージの表示・非表示を切り替えます" Background="#00000000" BorderBrush="#00000000">
+            <Image Source="/CAPT_GDI;component/RES/IMG/APPEND_IMAGE_CHANGE.png" Margin="-2,-2,-2,-2"/>
+        </Button>
+        <Slider x:Name="SLI_APPEND_IMAGE_OPACITY" HorizontalAlignment="Right" VerticalAlignment="Top" Height="22" Margin="60,725,60,725" Width="100" Value="50" Maximum="100" SmallChange="1"/>
+
+        <Image x:Name="PCB_THUMBNAIL_03" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="160" Height="90" Margin="400,10,400,10" Opacity="0.8" />
+        <Image x:Name="PCB_THUMBNAIL_02" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="160" Height="90" Margin="230,10,230,10" Opacity="0.8" />
+        <Image x:Name="PCB_THUMBNAIL_01" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="160" Height="90" Margin="60,10,60,10" Opacity="0.8" />
+        
+        <Image x:Name="PCB_SHUTTER" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="45" Height="45" Margin="10,55,10,55" Source="/CAPT_GDI;component/RES/IMG/SHUTTER_C_W.png" ToolTip="撮影を行います" />
+        <Image x:Name="PCB_SHUTTER_JPEG" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="45" Height="45" Margin="10,10,10,10" Source="/CAPT_GDI;component/RES/IMG/SHUTTER_C_G.png" ToolTip="撮影を行います（SNS向け）" />
+    </Grid>
+</Window>
