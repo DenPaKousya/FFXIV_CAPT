@@ -1,0 +1,4 @@
+C:\Users\DenPa\source\repos\FFXIV_CAPT\SUPPORT_GAMEPAD_FFXIV_WPF\obj\Debug\SUPPORT_GAMEPAD_FFXIV_WPF.vbprojAssemblyReference.cache
+C:\Users\DenPa\source\repos\FFXIV_CAPT\SUPPORT_GAMEPAD_FFXIV_WPF\obj\Debug\WPF\WPF_SETTING.g.vb
+C:\Users\DenPa\source\repos\FFXIV_CAPT\SUPPORT_GAMEPAD_FFXIV_WPF\obj\Debug\SUPPORT_GAMEPAD_FFXIV_WPF_MarkupCompile.cache
+C:\Users\DenPa\source\repos\FFXIV_CAPT\SUPPORT_GAMEPAD_FFXIV_WPF\obj\Debug\SUPPORT_GAMEPAD_FFXIV_WPF_MarkupCompile.lref
