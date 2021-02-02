@@ -4,7 +4,7 @@
 winexe
 VB
 .vb
-C:\Users\develop.web\Source\Repos\FFXIV_CAPT\SRC\SUPPORT_GAMEPAD_FFXIV_WPF\obj\Debug\
+C:\Users\develop.web\Source\Repos\FFXIV_CAPT\SRC\SUPPORT_GAMEPAD_FFXIV_WPF\obj\Release\
 SUPPORT_GAMEPAD_FFXIV_WPF
 none
 false
@@ -13,7 +13,7 @@ false
 1-836528249
 
 20-531048403
-15-1861684541
+15-1118550955
 WPF\WPF_SETTING.xaml;
 
 True

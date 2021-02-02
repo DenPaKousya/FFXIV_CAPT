@@ -4,7 +4,7 @@
 winexe
 VB
 .vb
-C:\Users\develop.web\Source\Repos\FFXIV_CAPT\SRC\CAPT_GDI\obj\Debug\
+C:\Users\develop.web\Source\Repos\FFXIV_CAPT\SRC\CAPT_GDI\obj\Release\
 CAPT_GDI
 none
 false
@@ -12,8 +12,8 @@ false
 
 2-1117554614
 1-2128218854
-32-1967089034
-17-2111441677
+31-1213633383
+17-1368308091
 WPF\WPF_ROTATE.xaml;WPF\WPF_OVERLAY.xaml;
 
 True

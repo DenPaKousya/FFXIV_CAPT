@@ -4,7 +4,7 @@
 winexe
 VB
 .vb
-C:\Users\develop.web\Source\Repos\FFXIV_CAPT\SRC\CAPT_GDI_WPF\obj\Debug\
+C:\Users\develop.web\Source\Repos\FFXIV_CAPT\SRC\CAPT_GDI_WPF\obj\Release\
 CAPT_GDI
 none
 false
@@ -12,8 +12,8 @@ false
 
 5-1836384800
 2-1894815654
-412020127281
-17-2111441677
+40-1521384364
+17-1368308091
 WPF\WPF_LOGO.xaml;WPF\WPF_OVERLAY.xaml;WPF\WPF_ROTATE.xaml;WPF\WPF_THUMBNAIL.xaml;WPF\WPF_TRIM.xaml;
 
 True
