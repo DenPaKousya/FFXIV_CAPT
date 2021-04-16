@@ -11,3 +11,4 @@ C:\Users\DenPa\source\repos\FFXIV_CAPT\SRC\STICKER_HELPER\obj\Debug\STICKER_HELP
 C:\Users\DenPa\source\repos\FFXIV_CAPT\SRC\STICKER_HELPER\obj\Debug\STICKER_HELPER.vbproj.GenerateResource.cache
 C:\Users\DenPa\source\repos\FFXIV_CAPT\SRC\STICKER_HELPER\obj\Debug\STICKER_HELPER.vbproj.CoreCompileInputs.cache
 C:\Users\DenPa\source\repos\FFXIV_CAPT\SRC\STICKER_HELPER\obj\Debug\STICKER_HELPER.exe
+C:\Users\DenPa\source\repos\FFXIV_CAPT\SRC\STICKER_HELPER\obj\Debug\STICKER_HELPER.vbprojAssemblyReference.cache

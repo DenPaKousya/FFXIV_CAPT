@@ -4,7 +4,7 @@
 winexe
 VB
 .vb
-C:\Users\develop.web\Source\Repos\FFXIV_CAPT\SRC\STICKER_HELPER\obj\Debug\
+C:\Users\DenPa\source\repos\FFXIV_CAPT\SRC\STICKER_HELPER\obj\Debug\
 STICKER_HELPER
 none
 false
@@ -16,5 +16,5 @@ false
 111224861933
 WPF\WPF_DOWNLOAD.xaml;WPF_MAIN.xaml;
 
-True
+False
 
