@@ -15,7 +15,7 @@ Imports System.Windows
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("DenPaKousya")>
 <Assembly: AssemblyProduct("MARKER_HELPER")>
-<Assembly: AssemblyCopyright("Copyright ©  2020 DenPaKousya")>
+<Assembly: AssemblyCopyright("Copyright ©  2021 DenPaKousya")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: ComVisible(false)>
 
@@ -55,5 +55,5 @@ Imports System.Windows
 ' 既定値にすることができます:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("0.4.1.13")>
-<Assembly: AssemblyFileVersion("0.4.1.13")>
+<Assembly: AssemblyVersion("0.4.2.1")>
+<Assembly: AssemblyFileVersion("0.4.2.1")>

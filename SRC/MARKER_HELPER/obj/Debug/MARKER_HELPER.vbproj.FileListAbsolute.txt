@@ -17,7 +17,6 @@ C:\Users\DenPa\source\repos\FFXIV_CAPT\SRC\MARKER_HELPER\obj\Debug\MARKER_HELPER
 C:\Users\develop.web\Source\Repos\FFXIV_CAPT\SRC\MARKER_HELPER\bin\MARKER_HELPER.exe.config
 C:\Users\develop.web\Source\Repos\FFXIV_CAPT\SRC\MARKER_HELPER\bin\MARKER_HELPER.exe
 C:\Users\develop.web\Source\Repos\FFXIV_CAPT\SRC\MARKER_HELPER\bin\MARKER_HELPER.pdb
-C:\Users\develop.web\Source\Repos\FFXIV_CAPT\SRC\MARKER_HELPER\obj\Debug\MARKER_HELPER.vbprojAssemblyReference.cache
 C:\Users\develop.web\Source\Repos\FFXIV_CAPT\SRC\MARKER_HELPER\obj\Debug\WPF\WPF_DOWNLOAD.g.vb
 C:\Users\develop.web\Source\Repos\FFXIV_CAPT\SRC\MARKER_HELPER\obj\Debug\WPF_MAIN.g.vb
 C:\Users\develop.web\Source\Repos\FFXIV_CAPT\SRC\MARKER_HELPER\obj\Debug\MARKER_HELPER_MarkupCompile.cache
