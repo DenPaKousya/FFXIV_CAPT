@@ -748,7 +748,9 @@ Public Class WPF_MAIN
         Dim INT_BYTE_COUNT As Integer
         INT_BYTE_COUNT = BYT_UISAVE.Length
         'Const CST_BYTE_COUNT_UISAVE As Integer = 29728
-        Const CST_BYTE_COUNT_UISAVE As Integer = 64544
+        'Const CST_BYTE_COUNT_UISAVE As Integer = 64544
+        Const CST_BYTE_COUNT_UISAVE As Integer = 72736
+
         If INT_BYTE_COUNT <> CST_BYTE_COUNT_UISAVE Then
             STR_FUNC_CHECK_FILE_ERROR = ""
             STR_FUNC_CHECK_FILE_ERROR &= "ファイルサイズエラーです。" & System.Environment.NewLine

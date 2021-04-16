@@ -230,6 +230,16 @@
                 STR_RET = "極朱雀征魂戦"
             Case &H65
                 STR_RET = "朱雀征魂戦"
+            Case &H2A
+                STR_RET = "絶アルテマウェポン破壊作戦"
+            Case &HDF
+                STR_RET = "希望の園エデン零式：再生編1"
+            Case &HC1
+                STR_RET = "希望の園エデン零式：再生編3"
+            Case &HDD
+                STR_RET = "希望の園エデン零式：再生編2"
+            Case &HCA
+                STR_RET = "極エメラルドウェポン破壊作戦"
             Case &HE1
                 STR_RET = "希望の園エデン零式：共鳴編2"
             Case &HE6
