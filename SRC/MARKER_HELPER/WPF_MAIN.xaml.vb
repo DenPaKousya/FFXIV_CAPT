@@ -266,6 +266,8 @@ Public Class WPF_MAIN
                     STR_RET = FUNC_GET_NAME_CONTENT_30(Me.ID_CONTENT_02)
                 Case &H31
                     STR_RET = FUNC_GET_NAME_CONTENT_31(Me.ID_CONTENT_02)
+                Case &H32
+                    STR_RET = FUNC_GET_NAME_CONTENT_32(Me.ID_CONTENT_02)
                 Case &H33
                     STR_RET = FUNC_GET_NAME_CONTENT_33(Me.ID_CONTENT_02)
                 Case Else

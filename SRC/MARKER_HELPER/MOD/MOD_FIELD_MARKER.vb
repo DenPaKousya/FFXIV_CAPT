@@ -7,6 +7,8 @@
                 STR_RET = FUNC_GET_NAME_CONTENT_30(INT_ID_CONTENT_02)
             Case &H31
                 STR_RET = FUNC_GET_NAME_CONTENT_31(INT_ID_CONTENT_02)
+            Case &H32
+                STR_RET = FUNC_GET_NAME_CONTENT_32(INT_ID_CONTENT_02)
             Case &H33
                 STR_RET = FUNC_GET_NAME_CONTENT_33(INT_ID_CONTENT_02)
             Case Else
@@ -212,6 +214,19 @@
         Return STR_RET
     End Function
 
+    Public Function FUNC_GET_NAME_CONTENT_32(ByVal INT_ID_CONTENT As Integer) As String
+        Dim STR_RET As String
+        STR_RET = ""
+        Select Case INT_ID_CONTENT
+            Case &H3F
+                STR_RET = "極ダイヤウェポン捕獲作戦"
+            Case Else
+                STR_RET = ""
+        End Select
+
+        Return STR_RET
+    End Function
+
     Public Function FUNC_GET_NAME_CONTENT_33(ByVal INT_ID_CONTENT As Integer) As String
         Dim STR_RET As String
         STR_RET = ""
@@ -232,12 +247,16 @@
                 STR_RET = "朱雀征魂戦"
             Case &H2A
                 STR_RET = "絶アルテマウェポン破壊作戦"
-            Case &HDF
-                STR_RET = "希望の園エデン零式：再生編1"
+            Case &H87
+                STR_RET = "絶アレキサンダー討滅戦"
             Case &HC1
                 STR_RET = "希望の園エデン零式：再生編3"
+            Case &HC6
+                STR_RET = "希望の園エデン零式：再生編4"
             Case &HDD
                 STR_RET = "希望の園エデン零式：再生編2"
+            Case &HDF
+                STR_RET = "希望の園エデン零式：再生編1"
             Case &HCA
                 STR_RET = "極エメラルドウェポン破壊作戦"
             Case &HE1
