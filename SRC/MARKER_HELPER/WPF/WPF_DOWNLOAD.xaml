@@ -9,7 +9,7 @@
     <Grid>
         <GroupBox Header="DOWNLOAD LIST URL" VerticalAlignment="Top" Margin="5,5,5,0">
             <Grid>
-                <TextBox x:Name="TXT_URL_CSV" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,5,5,5" Width="430" Text="***" IsReadOnly="True" BorderBrush="{x:Null}" Background="#00FFFFFF"/>
+                <TextBox x:Name="TXT_URL_CSV" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,5,5,5" Width="430" Text="***" IsReadOnly="False" BorderBrush="{x:Null}" Background="#00FFFFFF"/>
                 <Button x:Name="BTN_VIEW_LIST" HorizontalAlignment="Right" Margin="5,5,5,5" Height="25" Width="70" Content="VIEW"/>
             </Grid>
         </GroupBox>

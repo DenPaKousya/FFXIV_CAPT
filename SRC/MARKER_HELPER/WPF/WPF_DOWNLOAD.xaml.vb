@@ -145,10 +145,17 @@ Public Class WPF_DOWNLOAD
 
     Private Sub SUB_VIEW_LIST()
 
+        Dim STR_URL As String
+        STR_URL = TXT_URL_CSV.Text
+        If STR_URL = "" Then
+            Exit Sub
+        End If
+
         Call SUB_PUT_GUIDE("マーカーリストをダウンロードしています。")
         Dim STR_PATH_CSV As String
         STR_PATH_CSV = ""
-        If Not FUNC_DOWNLOAD_CSV(STR_PATH_CSV) Then
+
+        If Not FUNC_DOWNLOAD_CSV(STR_PATH_CSV, STR_URL) Then
             Call MessageBox.Show(STR_FUNC_DOWNLOAD_CSV_ERR, Me.Title, MessageBoxButton.OK, MessageBoxImage.Exclamation)
             Exit Sub
         End If
@@ -221,7 +228,7 @@ Public Class WPF_DOWNLOAD
 
 
     Private STR_FUNC_DOWNLOAD_CSV_ERR As String
-    Private Function FUNC_DOWNLOAD_CSV(ByRef STR_PATH_CSV As String) As Boolean
+    Private Function FUNC_DOWNLOAD_CSV(ByRef STR_PATH_CSV As String, ByVal STR_URL As String) As Boolean
         STR_FUNC_DOWNLOAD_CSV_ERR = ""
 
         STR_PATH_CSV = ""
@@ -239,9 +246,6 @@ Public Class WPF_DOWNLOAD
             STR_FUNC_DOWNLOAD_CSV_ERR = STR_FILE_TOOL_LAST_ERR_STRING
             Return False
         End If
-
-        Dim STR_URL As String
-        STR_URL = TXT_URL_CSV.Text
 
         Dim WBC_CSV As System.Net.WebClient
         Try

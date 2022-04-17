@@ -218,6 +218,14 @@
         Dim STR_RET As String
         STR_RET = ""
         Select Case INT_ID_CONTENT
+            Case &H10
+                STR_RET = "万魔殿パンデモニウム零式：辺獄編4"
+            Case &H16
+                STR_RET = "万魔殿パンデモニウム零式：辺獄編3"
+            Case &H18
+                STR_RET = "万魔殿パンデモニウム零式：辺獄編1"
+            Case &H1A
+                STR_RET = "万魔殿パンデモニウム零式：辺獄編2"
             Case &H3F
                 STR_RET = "極ダイヤウェポン捕獲作戦"
             Case Else
