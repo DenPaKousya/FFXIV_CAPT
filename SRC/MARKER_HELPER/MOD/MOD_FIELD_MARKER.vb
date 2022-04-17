@@ -220,14 +220,20 @@
         Select Case INT_ID_CONTENT
             Case &H10
                 STR_RET = "万魔殿パンデモニウム零式：辺獄編4"
+            Case &H12
+                STR_RET = "極ゾディアーク討滅戦"
             Case &H16
                 STR_RET = "万魔殿パンデモニウム零式：辺獄編3"
             Case &H18
                 STR_RET = "万魔殿パンデモニウム零式：辺獄編1"
             Case &H1A
                 STR_RET = "万魔殿パンデモニウム零式：辺獄編2"
+            Case &H26
+                STR_RET = "極ハイデリン討滅戦"
             Case &H3F
                 STR_RET = "極ダイヤウェポン捕獲作戦"
+            Case &H7F
+                STR_RET = "終極の戦い"
             Case Else
                 STR_RET = ""
         End Select
