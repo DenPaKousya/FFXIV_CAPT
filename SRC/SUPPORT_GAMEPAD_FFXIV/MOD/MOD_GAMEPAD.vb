@@ -2,7 +2,7 @@
 
 #Region "モジュール用・定数"
     Const CST_NUMBER_BUTTON_MAX As Integer = 16
-    Const CST_BUTTONS_COUNT As Integer = 4
+    Const CST_BUTTONS_COUNT As Integer = 10
 #End Region
 
 #Region "モジュール用・列挙定数"
@@ -26,7 +26,7 @@
 #Region "モジュール用・変数"
     Private SRT_BUTTONS(CST_BUTTONS_COUNT) As SRT_BUTTON_PUSH
     Private FRM_PARENT As FRM_MAIN
-    Private ING_CAPTURE_GAMEPAD_ID As Integer
+    Public ING_CAPTURE_GAMEPAD_ID As Integer
 #End Region
 
 #Region "WIN32API"
@@ -45,7 +45,7 @@
     Private Const JOY_RETURNR As Long = &H8&
     Private Const JOY_RETURNPOV As Long = &H40&
     Private Const JOY_RETURNBUTTONS As Long = &H80&
-    Private Const JOY_RETURNALL As Long = (JOY_RETURNX Or JOY_RETURNY Or JOY_RETURNZ Or JOY_RETURNR Or JOY_RETURNU Or JOY_RETURNV Or JOY_RETURNPOV Or JOY_RETURNBUTTONS)
+    Public Const JOY_RETURNALL As Long = (JOY_RETURNX Or JOY_RETURNY Or JOY_RETURNZ Or JOY_RETURNR Or JOY_RETURNU Or JOY_RETURNV Or JOY_RETURNPOV Or JOY_RETURNBUTTONS)
 
     ' *** Message from Joystick
     Private Const MM_JOY1BUTTONDOWN As Long = &H3B5
@@ -54,15 +54,15 @@
     Private Const MM_JOY1ZMOVE As Long = &H3A2
 
     ' *** joyStick API MMResult
-    Private Const JOYERR_BASE As Long = 160
-    Private Const JOYERR_NOCANDO As Long = (JOYERR_BASE + 6)
-    Private Const JOYERR_NOERROR As Long = (0)
-    Private Const JOYERR_PARMS As Long = (JOYERR_BASE + 5)
-    Private Const JOYERR_UNPLUGGED As Long = (JOYERR_BASE + 7)
-    Private Const MMSYSERR_BASE As Long = 0
-    Private Const MMSYSERR_NODRIVER As Long = (MMSYSERR_BASE + 6)
-    Private Const MMSYSERR_INVALPARAM As Long = (MMSYSERR_BASE + 11)
-    Private Const MMSYSERR_BADDEVICEID As Long = (MMSYSERR_BASE + 2)
+    Public Const JOYERR_BASE As Long = 160
+    Public Const JOYERR_NOCANDO As Long = (JOYERR_BASE + 6)
+    Public Const JOYERR_NOERROR As Long = (0)
+    Public Const JOYERR_PARMS As Long = (JOYERR_BASE + 5)
+    Public Const JOYERR_UNPLUGGED As Long = (JOYERR_BASE + 7)
+    Public Const MMSYSERR_BASE As Long = 0
+    Public Const MMSYSERR_NODRIVER As Long = (MMSYSERR_BASE + 6)
+    Public Const MMSYSERR_INVALPARAM As Long = (MMSYSERR_BASE + 11)
+    Public Const MMSYSERR_BADDEVICEID As Long = (MMSYSERR_BASE + 2)
 
     ' ***** structure definision *****
     Public Structure JOYINFOEX
@@ -82,6 +82,7 @@
     End Structure
 
     ' ***** Win32 API declair *****
+    Public Declare Function joyGetNumDevs Lib "winmm.dll" Alias "joyGetNumDevs" () As Integer
     Public Declare Function joyGetPosEx Lib "winmm.dll" Alias "joyGetPosEx" (ByVal uJoyID As Integer, ByRef pji As JOYINFOEX) As Integer
 
     Public Declare Function joySetCapture Lib "winmm.dll" _
