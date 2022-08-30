@@ -232,6 +232,10 @@
                 STR_RET = "極ハイデリン討滅戦"
             Case &H3F
                 STR_RET = "極ダイヤウェポン捕獲作戦"
+            Case &H56
+                STR_RET = "極バルバリシア討滅戦"
+            Case &H5A
+                STR_RET = "幻魔神セフィロト討滅戦"
             Case &H7F
                 STR_RET = "終極の戦い"
             Case Else
