@@ -55,5 +55,5 @@ Imports System.Windows
 ' 既定値にすることができます:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("0.4.3.2")>
-<Assembly: AssemblyFileVersion("0.4.3.2")>
+<Assembly: AssemblyVersion("0.4.4.1")>
+<Assembly: AssemblyFileVersion("0.4.4.1")>
