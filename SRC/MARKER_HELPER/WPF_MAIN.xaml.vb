@@ -318,6 +318,7 @@ Public Class WPF_MAIN
     Private BRS_DEFAULT_MARKER_3 As Brush
     Private BRS_DEFAULT_MARKER_4 As Brush
 
+    Private RDO_MARKER(CST_COUNT_MARKER) As RadioButton
     Private LBL_NAME_CONTENT(CST_COUNT_MARKER) As Label
     Private LBL_MARKER_A(CST_COUNT_MARKER) As Label
     Private LBL_MARKER_B(CST_COUNT_MARKER) As Label
@@ -332,6 +333,37 @@ Public Class WPF_MAIN
 
 #Region "初期化・終了処理"
     Private Sub SUB_CTRL_NEW_INIT()
+        RDO_MARKER(1) = RDO_MARKER_01
+        RDO_MARKER(2) = RDO_MARKER_02
+        RDO_MARKER(3) = RDO_MARKER_03
+        RDO_MARKER(4) = RDO_MARKER_04
+        RDO_MARKER(5) = RDO_MARKER_05
+        RDO_MARKER(6) = RDO_MARKER_06
+        RDO_MARKER(7) = RDO_MARKER_07
+        RDO_MARKER(8) = RDO_MARKER_08
+        RDO_MARKER(9) = RDO_MARKER_09
+        RDO_MARKER(10) = RDO_MARKER_10
+        RDO_MARKER(11) = RDO_MARKER_11
+        RDO_MARKER(12) = RDO_MARKER_12
+        RDO_MARKER(13) = RDO_MARKER_13
+        RDO_MARKER(14) = RDO_MARKER_14
+        RDO_MARKER(15) = RDO_MARKER_15
+        RDO_MARKER(16) = RDO_MARKER_16
+        RDO_MARKER(17) = RDO_MARKER_17
+        RDO_MARKER(18) = RDO_MARKER_18
+        RDO_MARKER(19) = RDO_MARKER_19
+        RDO_MARKER(20) = RDO_MARKER_20
+        RDO_MARKER(21) = RDO_MARKER_21
+        RDO_MARKER(22) = RDO_MARKER_22
+        RDO_MARKER(23) = RDO_MARKER_23
+        RDO_MARKER(24) = RDO_MARKER_24
+        RDO_MARKER(25) = RDO_MARKER_25
+        RDO_MARKER(26) = RDO_MARKER_26
+        RDO_MARKER(27) = RDO_MARKER_27
+        RDO_MARKER(28) = RDO_MARKER_28
+        RDO_MARKER(29) = RDO_MARKER_29
+        RDO_MARKER(30) = RDO_MARKER_30
+
         LBL_NAME_CONTENT(1) = LBL_01_NAME_CONTENT
         LBL_NAME_CONTENT(2) = LBL_02_NAME_CONTENT
         LBL_NAME_CONTENT(3) = LBL_03_NAME_CONTENT
@@ -1353,55 +1385,29 @@ Public Class WPF_MAIN
         Dim INT_RET As Integer
         INT_RET = 0
 
-        If RDO_MARKER_01.IsChecked Then
-            INT_RET = 1
-            Return INT_RET
-        End If
-
-        If RDO_MARKER_02.IsChecked Then
-            INT_RET = 2
-            Return INT_RET
-        End If
-
-        If RDO_MARKER_03.IsChecked Then
-            INT_RET = 3
-            Return INT_RET
-        End If
-
-        If RDO_MARKER_04.IsChecked Then
-            INT_RET = 4
-            Return INT_RET
-        End If
-
-        If RDO_MARKER_05.IsChecked Then
-            INT_RET = 5
-            Return INT_RET
-        End If
+        For i = 1 To (RDO_MARKER.Length - 1)
+            If RDO_MARKER(i).IsChecked Then
+                INT_RET = i
+                Return INT_RET
+            End If
+        Next
 
         Return INT_RET
     End Function
 
     Private Sub SUB_CHECK_MARKER_DEFAULT()
-        If RDO_MARKER_01.IsChecked Then
-            Exit Sub
-        End If
-        If RDO_MARKER_02.IsChecked Then
-            Exit Sub
-        End If
-        If RDO_MARKER_03.IsChecked Then
-            Exit Sub
-        End If
-        If RDO_MARKER_04.IsChecked Then
-            Exit Sub
-        End If
-        If RDO_MARKER_05.IsChecked Then
-            Exit Sub
-        End If
-        RDO_MARKER_01.IsChecked = True
-        RDO_MARKER_02.IsChecked = False
-        RDO_MARKER_03.IsChecked = False
-        RDO_MARKER_04.IsChecked = False
-        RDO_MARKER_05.IsChecked = False
+
+        For i = 1 To (RDO_MARKER.Length - 1)
+            If RDO_MARKER(i).IsChecked Then
+                Exit Sub
+            End If
+        Next
+
+        RDO_MARKER(1).IsChecked = True
+        For i = 1 + 1 To (RDO_MARKER.Length - 1)
+            RDO_MARKER(i).IsChecked = False
+        Next
+
     End Sub
 
     Dim STR_FUNC_WRITE_FILE_ERROR As String
