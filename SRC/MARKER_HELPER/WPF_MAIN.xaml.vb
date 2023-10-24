@@ -1011,7 +1011,8 @@ Public Class WPF_MAIN
         'Const CST_BYTE_COUNT_UISAVE As Integer = 72736
         'Const CST_BYTE_COUNT_UISAVE As Integer = 94240
         'Const CST_BYTE_COUNT_UISAVE As Integer = 95264
-        Const CST_BYTE_COUNT_UISAVE As Integer = 105504
+        'Const CST_BYTE_COUNT_UISAVE As Integer = 105504
+        Const CST_BYTE_COUNT_UISAVE As Integer = 106528
 
         If INT_BYTE_COUNT <> CST_BYTE_COUNT_UISAVE Then
             STR_FUNC_CHECK_FILE_ERROR = ""
