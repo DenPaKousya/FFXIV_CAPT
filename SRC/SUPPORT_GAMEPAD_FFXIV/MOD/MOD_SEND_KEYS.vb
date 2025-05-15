@@ -150,7 +150,7 @@
             Dim INT_CODE As Integer
             INT_CODE = BYT_TEMP(0)
 
-            Call FUNC_SEND_KEYS(prcTARGET, INT_CODE,, True)
+            Call FUNC_SEND_KEYS(prcTARGET, INT_CODE, 20, True)
         Next
 
         Return True
@@ -366,7 +366,7 @@
         LPARAM_UP = &HC0000001
 
         If blnIME Then
-            Call SendMessage(PTR_HANDLE, ENM_SEND_MSG.WM_IME_CHAR, enmVK, 0)
+            Call SendMessage(PTR_HANDLE, ENM_SEND_MSG.WM_IME_CHAR, enmVK, LPARAM_DOWN)
         Else
             Call SendMessage(PTR_HANDLE, ENM_SEND_MSG.WM_KEYDOWN, enmVK, LPARAM_DOWN)
         End If
