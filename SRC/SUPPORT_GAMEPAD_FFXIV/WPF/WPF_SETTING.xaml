@@ -21,7 +21,8 @@
                                 <ComboBoxItem Content="標準コントローラー"/>
                                 <ComboBoxItem Content="DUALSHOCK®4 USB Wireless Adaptor"/>
                                 <ComboBoxItem Content="EDGE 301"/>
-                            </ComboBox>
+								<ComboBoxItem Content="DualSense®ワイヤレスコントローラー"/>
+							</ComboBox>
                         </Grid>
                     </GroupBox>
                     <GroupBox Header="割り当て" VerticalAlignment="Top" Margin="5,65,5,0" Height="250">

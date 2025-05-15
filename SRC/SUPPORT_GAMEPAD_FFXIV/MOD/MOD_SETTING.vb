@@ -10,6 +10,7 @@
         NORMAL = 1
         DS4 = 2
         EDGE301 = 3
+        DUAL_SENSE = 4
     End Enum
 
 #End Region
@@ -363,6 +364,37 @@
                     STR_ITEMS(12) = "R3"
                     STR_ITEMS(13) = "PS"
                     STR_ITEMS(14) = "PAD"
+                Case ENM_KIND_GAMEPAD.EDGE301
+                    ReDim STR_ITEMS(10)
+                    STR_ITEMS(0) = "未使用"
+                    STR_ITEMS(1) = "A"
+                    STR_ITEMS(2) = "B"
+                    STR_ITEMS(3) = "X"
+                    STR_ITEMS(4) = "Y"
+                    STR_ITEMS(5) = "LB"
+                    STR_ITEMS(6) = "RB"
+                    STR_ITEMS(7) = "BACK"
+                    STR_ITEMS(8) = "START"
+                    STR_ITEMS(9) = "L3"
+                    STR_ITEMS(10) = "R3"
+                Case ENM_KIND_GAMEPAD.DUAL_SENSE
+                    ReDim STR_ITEMS(15)
+                    STR_ITEMS(0) = "未使用"
+                    STR_ITEMS(1) = "□"
+                    STR_ITEMS(2) = "×"
+                    STR_ITEMS(3) = "〇"
+                    STR_ITEMS(4) = "△"
+                    STR_ITEMS(5) = "L1"
+                    STR_ITEMS(6) = "R1"
+                    STR_ITEMS(7) = "L2"
+                    STR_ITEMS(8) = "R2"
+                    STR_ITEMS(9) = "SHARE"
+                    STR_ITEMS(10) = "OPTIONS"
+                    STR_ITEMS(11) = "L3"
+                    STR_ITEMS(12) = "R3"
+                    STR_ITEMS(13) = "PS"
+                    STR_ITEMS(14) = "PAD"
+                    STR_ITEMS(15) = "MUTE"
                 Case Else
                     ReDim STR_ITEMS(16)
                     For i = 0 To STR_ITEMS.Length - 1
@@ -437,7 +469,24 @@
                     STR_ITEMS(8) = "START"
                     STR_ITEMS(9) = "LS"
                     STR_ITEMS(10) = "RS"
-
+                Case ENM_KIND_GAMEPAD.DUAL_SENSE
+                    ReDim STR_ITEMS(15)
+                    STR_ITEMS(0) = "未使用"
+                    STR_ITEMS(1) = "□"
+                    STR_ITEMS(2) = "×"
+                    STR_ITEMS(3) = "〇"
+                    STR_ITEMS(4) = "△"
+                    STR_ITEMS(5) = "L1"
+                    STR_ITEMS(6) = "R1"
+                    STR_ITEMS(7) = "L2"
+                    STR_ITEMS(8) = "R2"
+                    STR_ITEMS(9) = "SHARE"
+                    STR_ITEMS(10) = "OPTIONS"
+                    STR_ITEMS(11) = "L3"
+                    STR_ITEMS(12) = "R3"
+                    STR_ITEMS(13) = "PS"
+                    STR_ITEMS(14) = "PAD"
+                    STR_ITEMS(15) = "MUTE"
                 Case Else
                     ReDim STR_ITEMS(16)
                     For i = 0 To STR_ITEMS.Length - 1
