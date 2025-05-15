@@ -56,11 +56,8 @@
 #Region "プロセス検知・確認"
     Private Sub SUB_GET_PROCESS()
 
-        PRC_TARGET = FUNC_GET_FFXIV_PROCESS()
+        PRC_TARGET = FUNC_GET_FFXIV_PROCESS(, SRT_CURRENT_SETTINGS.ENVIRON.PROCESS.ID)
 
-        If PRC_TARGET Is Nothing Then 'プロセスが無い場合は
-            Exit Sub
-        End If
     End Sub
 
 #End Region

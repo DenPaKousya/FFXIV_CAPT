@@ -16,3 +16,11 @@ C:\Users\dd\source\repos\FFXIV_CAPT\SRC\CAPT_COMMON\obj\Debug\CAPT_COMMON.Resour
 C:\Users\dd\source\repos\FFXIV_CAPT\SRC\CAPT_COMMON\obj\Debug\CAPT_COMMON.vbproj.GenerateResource.cache
 C:\Users\dd\source\repos\FFXIV_CAPT\SRC\CAPT_COMMON\obj\Debug\CAPT_COMMON.vbproj.CoreCompileInputs.cache
 C:\Users\dd\source\repos\FFXIV_CAPT\SRC\CAPT_COMMON\obj\Debug\CAPT_COMMON.dll
+C:\Users\d.user\Source\Repos\FFXIV_CAPT\SRC\CAPT_COMMON\bin\CAPT_COMMON.dll
+C:\Users\d.user\Source\Repos\FFXIV_CAPT\SRC\CAPT_COMMON\obj\Debug\CAPT_COMMON.vbproj.AssemblyReference.cache
+C:\Users\d.user\Source\Repos\FFXIV_CAPT\SRC\CAPT_COMMON\obj\Debug\CAPT_COMMON.Resources.resources
+C:\Users\d.user\Source\Repos\FFXIV_CAPT\SRC\CAPT_COMMON\obj\Debug\CAPT_COMMON.vbproj.GenerateResource.cache
+C:\Users\d.user\Source\Repos\FFXIV_CAPT\SRC\CAPT_COMMON\obj\Debug\CAPT_COMMON.vbproj.CoreCompileInputs.cache
+C:\Users\d.user\Source\Repos\FFXIV_CAPT\SRC\CAPT_COMMON\obj\Debug\CAPT_COMMON.dll
+C:\Users\d.user\Source\Repos\FFXIV_CAPT\SRC\CAPT_COMMON\bin\CAPT_COMMON.pdb
+C:\Users\d.user\Source\Repos\FFXIV_CAPT\SRC\CAPT_COMMON\obj\Debug\CAPT_COMMON.pdb

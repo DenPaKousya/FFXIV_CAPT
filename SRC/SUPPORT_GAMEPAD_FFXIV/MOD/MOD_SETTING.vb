@@ -17,11 +17,20 @@
 #Region "モジュール用・構造体"
     Public Structure SRT_SETTINGS
         Public GAMEPAD As SRT_SETTINGS_GAMEPAD
+        Public ENVIRON As SRT_SETTINGS_ENVIRON
     End Structure
 
     Public Structure SRT_SETTINGS_GAMEPAD
         Public KIND_GAME_PAD As Integer
         Public ALLOCATION() As SRT_SETTINGS_GAMEPAD_ALLOCATION
+    End Structure
+
+    Public Structure SRT_SETTINGS_ENVIRON
+        Public PROCESS As SRT_SETTINGS_ENVIRON_PROCESS
+    End Structure
+
+    Public Structure SRT_SETTINGS_ENVIRON_PROCESS
+        Public ID As Integer
     End Structure
 
     Public Structure SRT_SETTINGS_GAMEPAD_ALLOCATION
@@ -102,6 +111,13 @@
                 .SRT_GAC(i).MOUSE_X.Text = SRT_SET.GAMEPAD.ALLOCATION(i).MOUSE_X
                 .SRT_GAC(i).MOUSE_Y.Text = SRT_SET.GAMEPAD.ALLOCATION(i).MOUSE_Y
             Next
+
+            If SRT_SET.ENVIRON.PROCESS.ID > 0 Then
+                Call SUB_COMBO_BOX_SELECT_ITEM_ONE(.CMB_ENVIRON_PORCESS_ID, CStr(SRT_SET.ENVIRON.PROCESS.ID))
+            Else
+                Call SUB_COMBO_BOX_SELECT_ITEM_FIRST(.CMB_ENVIRON_PORCESS_ID)
+            End If
+
             'Dim INT_INDEX As Integer
             'INT_INDEX = 0
 
@@ -146,6 +162,34 @@
             '.TXT_GAMEPAD_ALLOCATION_04_MOUSE_Y.Text = SRT_SET.GAMEPAD.ALLOCATION(INT_INDEX).MOUSE_Y
 
         End With
+    End Sub
+
+    Private Sub SUB_COMBO_BOX_SELECT_ITEM_ONE(ByRef CMB_BASE As System.Windows.Controls.ComboBox, ByVal STR_CHECK As String)
+
+        If CMB_BASE.Items.Count <= 0 Then
+            Exit Sub
+        End If
+
+        Call SUB_COMBO_BOX_SELECT_ITEM_FIRST(CMB_BASE)
+
+        For i = 0 To (CMB_BASE.Items.Count - 1)
+            Dim STR_ITEM As String
+            STR_ITEM = CMB_BASE.Items(i)
+            If STR_ITEM = STR_CHECK Then
+                CMB_BASE.SelectedIndex = i
+                Exit For
+            End If
+        Next
+
+    End Sub
+
+    Public Sub SUB_COMBO_BOX_SELECT_ITEM_FIRST(ByRef CMB_BASE As System.Windows.Controls.ComboBox)
+
+        If CMB_BASE.Items.Count <= 0 Then
+            Exit Sub
+        End If
+
+        CMB_BASE.SelectedIndex = 0
     End Sub
 
     Public Function FUNC_GET_SETTINGS(ByRef CTL_SETTINGS As FRM_SETTING) As SRT_SETTINGS
@@ -244,6 +288,14 @@
             '.ALLOCATION(INT_INDEX).MOUSE_Y = CTL_SETTINGS.TXT_GAMEPAD_ALLOCATION_04_MOUSE_Y.Text
         End With
 
+        With SRT_RET.ENVIRON.PROCESS
+            If CTL_SETTINGS.CMB_ENVIRON_PORCESS_ID.SelectedIndex <= 0 Then
+                .ID = 0
+            Else
+                .ID = CInt(CTL_SETTINGS.CMB_ENVIRON_PORCESS_ID.Text)
+            End If
+        End With
+
         Return SRT_RET
     End Function
 
@@ -267,6 +319,10 @@
                 .MOUSE_Y = 0
             End With
         Next
+
+        With SRT_RET.ENVIRON.PROCESS
+            .ID = 0
+        End With
 
         Return SRT_RET
     End Function
@@ -602,7 +658,7 @@
     End Sub
 
 
-    Private Sub SUB_REFRESH_COMBO_ITEM_WPF(ByRef CMB_REFRESH As System.Windows.Controls.ComboBox, ByRef STR_ROW() As String)
+    Public Sub SUB_REFRESH_COMBO_ITEM_WPF(ByRef CMB_REFRESH As System.Windows.Controls.ComboBox, ByRef STR_ROW() As String)
         Dim intSELECTED_INDEX As Integer
 
         intSELECTED_INDEX = CMB_REFRESH.SelectedIndex '退避

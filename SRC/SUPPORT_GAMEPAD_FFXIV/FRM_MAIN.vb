@@ -29,20 +29,19 @@
         Call SUB_CALL_SETTING(Me)
     End Sub
 
-    Private Sub SUB_SET_PROCESS(ByVal blnENABLED As Boolean)
-        Dim strTEXT As String
+    Private Sub SUB_SET_PROCESS(ByVal BLN_ENABLED As Boolean)
+        Dim STR_TEXT As String
 
-        If blnENABLED Then
-            strTEXT = ""
-            strTEXT &= "FFXIVプロセスを確認しました。" & System.Environment.NewLine
-            strTEXT &= "プロセスID：" & PRC_TARGET.Id & System.Environment.NewLine
+        STR_TEXT = ""
+        If BLN_ENABLED Then
+            STR_TEXT &= "FFXIVプロセスを確認しました。" & System.Environment.NewLine
+            STR_TEXT &= "プロセスID：" & PRC_TARGET.Id & System.Environment.NewLine
         Else
-            strTEXT = ""
-            strTEXT = "FFXIVプロセスを探索しています..." & System.Environment.NewLine
+            STR_TEXT &= "FFXIVプロセスを探索しています..." & System.Environment.NewLine
         End If
 
-        NTI_TASK.Text = strTEXT
-        Call SUB_CMS_ENABLED(blnENABLED)
+        NTI_TASK.Text = STR_TEXT
+        Call SUB_CMS_ENABLED(BLN_ENABLED)
     End Sub
 
     Private Sub SUB_CMS_ENABLED(ByVal BLN_ENABLED As Boolean)

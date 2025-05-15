@@ -154,7 +154,18 @@
                     </GroupBox>
                 </Grid>
             </TabItem>
-            <TabItem Header="動作テスト">
+			<TabItem Header="環境">
+				<GroupBox Header="プロセス" Margin="5,5,5,5" >
+					<Grid>
+						<Grid Margin="5,5,5,5" VerticalAlignment="Top">
+							<Label HorizontalAlignment="Left" Margin="5,5,5,5" Content="ID" />
+							<ComboBox x:Name="CMB_ENVIRON_PORCESS_ID" HorizontalAlignment="Left" Margin="40,5,5,5" Width="100"/>
+							<Label HorizontalAlignment="Left" Margin="150,5,5,5" Content="複数の画面が起動している場合に優先するプロセスIDを指定します。" />
+						</Grid>
+					</Grid>
+				</GroupBox>
+			</TabItem>
+			<TabItem Header="動作テスト">
                 <GroupBox Header="各種確認" Margin="5,5,5,5" >
                     <Grid>
                         <Grid Margin="5,5,5,5" VerticalAlignment="Top">

@@ -58,7 +58,26 @@ Public Class WPF_SETTING
         Call SUB_REFRESH_KEY_MASK(Me)
         Call SUB_REFRESH_KEY(Me)
         Call SUB_GET_ITEM_TEST_GANMEPAD_ID()
+
+        Call SUB_REFRESH_ENV_PORCESS_ID()
+
         Call SUB_START_TIMER()
+    End Sub
+
+    Public Sub SUB_REFRESH_ENV_PORCESS_ID()
+        Dim INT_ID() As Integer
+
+        INT_ID = FUNC_GET_PROCESS_ID_ARRAY()
+
+        Dim STR_ITEMS() As String
+        ReDim STR_ITEMS(0)
+        STR_ITEMS(0) = "自動選択"
+        For i = 1 To (INT_ID.Length - 1)
+            ReDim Preserve STR_ITEMS(i)
+            STR_ITEMS(i) = INT_ID(i)
+        Next
+
+        Call SUB_REFRESH_COMBO_ITEM_WPF(CMB_ENVIRON_PORCESS_ID, STR_ITEMS)
     End Sub
 
     Private Sub SUB_CTRL_VIEW_INIT()
@@ -80,6 +99,8 @@ Public Class WPF_SETTING
         Call MOD_GAMEPAD.SUB_PARAM_INIT()
 
         Call FUNC_SET_SETTING()
+
+        PRC_TARGET = Nothing
 
         Call Me.Close()
     End Sub
