@@ -351,33 +351,33 @@
     End Function
 
     Private Function FUNC_SEND_KEYS(ByRef prcTARGET As Process, ByVal enmVK As ENM_SEND_VK, Optional ByVal intWAIT_MSEC As Integer = CST_WAIT_ONE, Optional ByVal blnIME As Boolean = False) As Boolean
-        Dim ptrHANDLE As IntPtr
-        Dim ptrCHILD As Integer
 
         If intWAIT_MSEC <= 0 Then
             Return True
         End If
 
-        ptrCHILD = IntPtr.Zero
-        'ptrCHILD = FUNC_FIND_WINDOW_EX(prcTARGET.MainWindowHandle, 0, "Edit", "")
+        Dim PTR_HANDLE As IntPtr
+        PTR_HANDLE = PRC_TARGET.MainWindowHandle
 
-        If ptrCHILD > 0 Then
-            ptrHANDLE = ptrCHILD
-        Else
-            ptrHANDLE = prcTARGET.MainWindowHandle
-        End If
+        Dim LPARAM_DOWN As Integer
+        LPARAM_DOWN = &H0
+
+        Dim LPARAM_UP As Integer
+        LPARAM_UP = &HC0000001
 
         If blnIME Then
-            Call SendMessage(ptrHANDLE, ENM_SEND_MSG.WM_IME_CHAR, enmVK, 0)
+            Call SendMessage(PTR_HANDLE, ENM_SEND_MSG.WM_IME_CHAR, enmVK, 0)
         Else
-            Call SendMessage(ptrHANDLE, ENM_SEND_MSG.WM_KEYDOWN, enmVK, 0)
+            Call SendMessage(PTR_HANDLE, ENM_SEND_MSG.WM_KEYDOWN, enmVK, LPARAM_DOWN)
         End If
 
         Call System.Threading.Thread.Sleep(intWAIT_MSEC)
 
         If Not blnIME Then
-            Call SendMessage(ptrHANDLE, ENM_SEND_MSG.WM_KEYUP, enmVK, 0)
+            Call SendMessage(PTR_HANDLE, ENM_SEND_MSG.WM_KEYUP, enmVK, LPARAM_UP)
         End If
+
+        Call Debug.WriteLine("FUNC_SEND_KEYS" & enmVK.ToString)
 
         Return True
     End Function
@@ -391,7 +391,6 @@
 
         Dim PTR_CHILD As IntPtr
         PTR_CHILD = IntPtr.Zero
-        'PTR_CHILD = FUNC_FIND_WINDOW_EX(PRC_TARGET.MainWindowHandle, 0, "Edit", "")
 
         If PTR_CHILD = IntPtr.Zero Then
             PTR_HANDLE = PRC_TARGET.MainWindowHandle
@@ -399,20 +398,27 @@
             PTR_HANDLE = PTR_CHILD
         End If
 
+        Dim LPARAM_DOWN As Integer
+        'LPARAM_DOWN = &H1E0001
+        LPARAM_DOWN = &H0
+
+        Dim LPARAM_UP As Integer
+        LPARAM_UP = &HC0000001
+
         If ENM_MASK <> ENM_MASK_KEYS.NONE Then
             Dim ENM_VK_MASK As ENM_SEND_VK
             ENM_VK_MASK = FUNC_GET_VK_MASK(ENM_MASK)
-            Call SendMessage(PTR_HANDLE, ENM_SEND_MSG.WM_KEYDOWN, ENM_VK_MASK, 0)
+            Call SendMessage(PTR_HANDLE, ENM_SEND_MSG.WM_KEYDOWN, ENM_VK_MASK, LPARAM_DOWN)
         End If
 
-        Call SendMessage(PTR_HANDLE, ENM_SEND_MSG.WM_KEYDOWN, ENM_VK, 0)
+        Call SendMessage(PTR_HANDLE, ENM_SEND_MSG.WM_KEYDOWN, ENM_VK, LPARAM_DOWN)
         Call System.Threading.Thread.Sleep(intWAIT_MSEC)
-        Call SendMessage(PTR_HANDLE, ENM_SEND_MSG.WM_KEYUP, ENM_VK, 0)
+        Call SendMessage(PTR_HANDLE, ENM_SEND_MSG.WM_KEYUP, ENM_VK, LPARAM_UP)
 
         If ENM_MASK <> ENM_MASK_KEYS.NONE Then
             Dim ENM_VK_MASK As ENM_SEND_VK
             ENM_VK_MASK = FUNC_GET_VK_MASK(ENM_MASK)
-            Call SendMessage(PTR_HANDLE, ENM_SEND_MSG.WM_KEYUP, ENM_VK_MASK, 0)
+            Call SendMessage(PTR_HANDLE, ENM_SEND_MSG.WM_KEYUP, ENM_VK_MASK, LPARAM_UP)
         End If
 
         Return True

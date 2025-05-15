@@ -239,25 +239,48 @@
         ptrCHILD = 0
         'ptrCHILD = FUNC_FIND_WINDOW_EX(prcTARGET.MainWindowHandle, 0, "Edit", "")
 
-        If ptrCHILD > 0 Then
-            ptrHANDLE = ptrCHILD
-        Else
-            ptrHANDLE = prcTARGET.MainWindowHandle
-        End If
+        Dim LPARAM_DOWN As Integer
+        'LPARAM_DOWN = &H1E0001
+        LPARAM_DOWN = &H0
+
+        Dim LPARAM_UP As Integer
+        LPARAM_UP = &HC0000001
 
         If blnIME Then
             Call SendMessage(ptrHANDLE, ENM_SEND_MSG.WM_IME_CHAR, enmVK, 0)
         Else
-            Call SendMessage(ptrHANDLE, ENM_SEND_MSG.WM_KEYDOWN, enmVK, 0)
+            Call SendMessage(ptrHANDLE, ENM_SEND_MSG.WM_KEYDOWN, enmVK, LPARAM_DOWN)
         End If
 
         Call System.Threading.Thread.Sleep(intWAIT_MSEC)
 
         If Not blnIME Then
-            Call SendMessage(ptrHANDLE, ENM_SEND_MSG.WM_KEYUP, enmVK, 0)
+            Call SendMessage(ptrHANDLE, ENM_SEND_MSG.WM_KEYUP, enmVK, LPARAM_UP)
         End If
 
+        Call Debug.WriteLine("FUNC_SEND_KEYS" & enmVK.ToString)
+
         Return True
+
+        'If ptrCHILD > 0 Then
+        '    ptrHANDLE = ptrCHILD
+        'Else
+        '    ptrHANDLE = prcTARGET.MainWindowHandle
+        'End If
+
+        'If blnIME Then
+        '    Call SendMessage(ptrHANDLE, ENM_SEND_MSG.WM_IME_CHAR, enmVK, 0)
+        'Else
+        '    Call SendMessage(ptrHANDLE, ENM_SEND_MSG.WM_KEYDOWN, enmVK, 0)
+        'End If
+
+        'Call System.Threading.Thread.Sleep(intWAIT_MSEC)
+
+        'If Not blnIME Then
+        '    Call SendMessage(ptrHANDLE, ENM_SEND_MSG.WM_KEYUP, enmVK, 0)
+        'End If
+
+        'Return True
     End Function
 #End Region
 

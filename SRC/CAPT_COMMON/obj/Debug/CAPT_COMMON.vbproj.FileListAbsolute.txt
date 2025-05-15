@@ -24,3 +24,5 @@ C:\Users\d.user\Source\Repos\FFXIV_CAPT\SRC\CAPT_COMMON\obj\Debug\CAPT_COMMON.vb
 C:\Users\d.user\Source\Repos\FFXIV_CAPT\SRC\CAPT_COMMON\obj\Debug\CAPT_COMMON.dll
 C:\Users\d.user\Source\Repos\FFXIV_CAPT\SRC\CAPT_COMMON\bin\CAPT_COMMON.pdb
 C:\Users\d.user\Source\Repos\FFXIV_CAPT\SRC\CAPT_COMMON\obj\Debug\CAPT_COMMON.pdb
+C:\Users\DenPa\Source\Repos\FFXIV_CAPT\SRC\CAPT_COMMON\bin\CAPT_COMMON.pdb
+C:\Users\DenPa\Source\Repos\FFXIV_CAPT\SRC\CAPT_COMMON\obj\Debug\CAPT_COMMON.pdb

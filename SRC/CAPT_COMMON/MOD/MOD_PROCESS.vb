@@ -3,10 +3,10 @@
 Public Module MOD_PROCESS
 
 #Region "モジュール用・定数"
-    'Private Const CST_DEFAULT_PROCESS_NAME As String = "ffxiv_dx11"
+    Private Const CST_DEFAULT_PROCESS_NAME As String = "ffxiv_dx11"
     'Private Const CST_DEFAULT_PROCESS_NAME As String = "chrome"
     'Private Const CST_DEFAULT_PROCESS_NAME As String = "cmd"
-    Private Const CST_DEFAULT_PROCESS_NAME As String = "Hidemaru"
+    'Private Const CST_DEFAULT_PROCESS_NAME As String = "Hidemaru"
     'Private Const CST_DEFAULT_PROCESS_NAME As String = "Notepad"
     'Private Const CST_DEFAULT_PROCESS_NAME As String = "Calculator"
     'Private Const CST_DEFAULT_PROCESS_NAME As String = "FlowScape"
